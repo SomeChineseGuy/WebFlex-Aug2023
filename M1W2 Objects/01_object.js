@@ -48,8 +48,8 @@ const studentTwo = {
 
 const studentClass = 'cohort';
 
-console.log(studentTwo.isGrad);
-console.log(studentTwo['isGrad']);
+console.log('0', studentTwo.isGrad);
+console.log('1', studentTwo['isGrad']);
 
 console.log(studentTwo.studentClass);
 console.log(studentTwo['studentClass']);
