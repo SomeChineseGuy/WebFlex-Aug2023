@@ -1,0 +1,18 @@
+@import '_variable';
+
+body {
+  background-color: $primary;
+  padding: $padding-width;
+}
+
+.nav {
+  padding: 30px;
+
+  .left {
+    padding: 40px;
+  }
+
+  .right a{
+    color: green
+  }
+}

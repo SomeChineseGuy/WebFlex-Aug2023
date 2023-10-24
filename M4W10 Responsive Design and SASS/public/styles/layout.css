@@ -1,0 +1,16 @@
+body {
+  background-color: hotpink;
+  padding: 40px;
+}
+
+.nav {
+  padding: 30px;
+}
+.nav .left {
+  padding: 40px;
+}
+.nav .right a {
+  color: green;
+}
+
+/*# sourceMappingURL=layout.css.map */
