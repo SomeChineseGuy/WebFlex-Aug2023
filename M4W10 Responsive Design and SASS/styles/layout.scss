@@ -2,17 +2,19 @@
 
 body {
   background-color: $primary;
-  padding: $padding-width;
 }
 
-.nav {
-  padding: 30px;
+.navbar {
+  display: flex;
+  justify-content: space-between;
 
-  .left {
-    padding: 40px;
+  .right {
+    display: flex;
+    justify-content: space-between;
+    width: 50%;
   }
 
-  .right a{
-    color: green
+  .left {
+    width: 100%;
   }
 }

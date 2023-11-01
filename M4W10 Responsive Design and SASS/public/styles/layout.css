@@ -1,16 +1,18 @@
 body {
   background-color: hotpink;
-  padding: 40px;
 }
 
-.nav {
-  padding: 30px;
+.navbar {
+  display: flex;
+  justify-content: space-between;
 }
-.nav .left {
-  padding: 40px;
+.navbar .right {
+  display: flex;
+  justify-content: space-between;
+  width: 50%;
 }
-.nav .right a {
-  color: green;
+.navbar .left {
+  width: 100%;
 }
 
 /*# sourceMappingURL=layout.css.map */

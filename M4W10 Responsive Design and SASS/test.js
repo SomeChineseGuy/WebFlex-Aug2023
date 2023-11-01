@@ -6,43 +6,57 @@
   {{{{}}}}
   }{}}{}
 
-
   {{}} == balance
   {{}{}} === balance
   }{{}{} === not
   {{{}} === not
   {}}{}{ === not
-  {{} == not 0
+  {{} == not 
   {{{{{}}}}} === balance
-  { === +1
-  } === -1
+  
+  edges
+  - Check the first item to see if it's }, if it is return false
+  - Check the last item to see if it is { if return false
+  - Check if the array is an even number, if not return false
 
-  Split string into array and
-  Loop through array
+  We convert it into an array then
+  We loop over the items 
 
-  check the length of the array to see if it's even, if not return false
-  check the first one to see if it's }, we know to return false
+  if state item === }
+  counter += 1
+  if state item === {
+  counter2 += 1
 
-  equal amount of opening and close
+  if the first item and the last item is a match move to the next item
+  obj = {
+    "}": 0,
+    "{": 1
+  }
 
-  how do you program tic tac toe
-  X = + 1
-  O = - 1
+  obj["}"] > obj["{"] return false
 
-  X O X + 1
-  X O O - 1
-  X X O + 1
-  +3 -1 -1 -1
+  How should we check for true?
+  end of the loop if they are equal return true else false
+
+  2 empty array and compare the lenght of the array 
+  arr1 = [{{{]
+  arr2 = [}}] 
+  if at any point arr2 > arr1 return false
+  this will equal false because the lenght does no match
+
+  arr1 = []
+  arr2 = [}]
 */
 
 const isBalanced = (str) => {
-  const arr = str.split("");
-  let num = 0;
-  for(let item of arr) {
-    item === "{" ? num += 1 : num -= 1
-    if(num < 0) return false;
+  const newArr = str.split("")
+  const arr1 = []
+  const arr2 = []
+  for(let item of newArr) {
+    item === "{" ? arr1.push(item) : arr2.push(item)
+    if(arr2.length > arr1.length) return false
   }
-  return num === 0
+  return arr2.length === arr1.length
 }
 
 console.log(isBalanced("{{{}}")) // not 

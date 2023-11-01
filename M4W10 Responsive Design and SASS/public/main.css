@@ -2,44 +2,64 @@ body {
   background-color: tomato;
 }
 
-nav {
+.navbar {
   display: flex;
   justify-content: space-between;
 }
 
-.nav .right {
+.navbar .right {
   display: flex;
   justify-content: space-between;
   width: 50%;
 }
 
 .logo {
-  width: 200px;
-  transition-duration: 5s;
+  width: 100px;
+  transition-duration: 10s;
   transition-property: all;
-  transition-timing-function: cubic-bezier(0, 1.46, 1, -0.41);
-
+  transition-delay: 0s;
+  transition-timing-function: ease-out;
 }
-
 
 .logo:hover {
   width: 500px;
 }
 
-@media screen and (max-width: 991.98px)  {
-  .nav .right {    
+.m-logo {
+  width: 200px;
+  display: none;
+}
+
+
+@media screen and (max-width: 991.98px) {
+  .logo {
+    display: none;
+  }
+
+  .m-logo {
+    display: block;
+  }
+
+  .navbar .right {
     width: 70%;
   }
 }
 
-@media screen and (max-width: 767.98px)  {
+@media screen and (max-width: 767.98px) {
   .logo {
-    width: 100px;
+    display: block;
   }
-  .nav .right {    
-    width: 80%;
+
+  .m-logo {
+    display: none;
+  }
+
+  .navbar {
+    flex-direction: column;
   }
 }
+
+
 
 /* 
   Min-width (media-breakpoint-up):
