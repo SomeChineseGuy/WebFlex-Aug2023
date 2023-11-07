@@ -1,0 +1,53 @@
+<%- include('partials/_header') -%>
+<body>
+	<%- include('partials/_nav')-%>
+		<h2>SQL from Our Apps</h2>
+		<form action="/query" method="POST">
+			<h1>Check for id or age</h1>
+			<label for=""> What ID?</label>
+			<input type="text" name="id">
+			<label for=""> What age?</label>
+			<input type="text" name="age">
+			<button>Submit</button>
+		</form>
+
+		<div>
+			<h1>Add a new Pet!</h1>
+			<form action="/add/pets" method="POST">
+				<label for="">Name</label>
+				<input type="text" name="name" id="">
+				<label for="">Species</label>
+				<input type="text" name="species" id="">
+				<label for="">Breed</label>
+				<input type="text" name="breed" id="">
+				<label for="">Sex</label>
+				<input type="text" name="sex" id="">
+				<label for="">User</label>
+				<input type="number" name="user_id" id="">
+				<label for="">Age</label>
+				<input type="number" name="age" id="">
+				<button>Add</button>
+			</form>
+		</div>
+
+		<div>
+			<h1>Add a new User!</h1>
+			<form id="form-user">
+				<label for="">Name</label>
+				<input type="text" name="name" id="name">
+				<label for="">Email</label>
+				<input type="email" name="email" id="email">
+				<label for="">Age</label>
+				<input type="number" name="age" id="age">
+				<button>Add</button>
+			</form>
+		</div>
+		<ul class="results">
+			<% if(resp) { %>
+				<% for (let user of resp.rows) { %>
+					<li><%= user.name %> </li>
+				<% } %>
+			<% } %>
+		</ul>
+</body>
+<%- include('partials/_footer')-%>
